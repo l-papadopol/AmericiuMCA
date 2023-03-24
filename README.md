@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1 style="text-align: center;"><span style="color: #000099;"><b>AmericiuMCA</b></span></h1>
-    <div style="text-align: center;"><img src="file:///home/hard/Scaricati/7%25%20crystal.png"
+    <div style="text-align: center;"><img src="7%25%20crystal.png"
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
     <h4><span style="color: #006600;">DESCRIPTION</span></h4>
     <p>AmericiuMCA is a software that implements multi-channel analyzer
