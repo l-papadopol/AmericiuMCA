@@ -36,9 +36,9 @@
     </ul>
     <p>Installation of this extensions is straightforward using "pip":</p>
     <ul>
-      <li><tt>
+      <li>
           <meta http-equiv="content-type" content="text/html; charset=utf-8">
-          <tt>pip install pyepics pygame numpy matplotlib</tt></tt></li>
+          <tt>pip install pyepics pygame numpy matplotlib</tt></li>
     </ul>
     <h4><span style="color: #006600;">HOW TO EXECUTE<br>
       </span></h4>
