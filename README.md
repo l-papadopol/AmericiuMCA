@@ -1,6 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>AmericiuMCA</title>
+    <meta name="author" content="Papadopol Lucian Ioan">
+  </head>
+  <body>
     <h1 style="text-align: center;"><span style="color: #000099;"><b>AmericiuMCA</b></span></h1>
-    <div style="text-align: center;"><img src="7%25%20crystal.png"
+    <div style="text-align: center;"><img src="file:///home/hard/Scaricati/7%25%20crystal.png"
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
     <h4><span style="color: #006600;">DESCRIPTION</span></h4>
     <p>AmericiuMCA is a software that implements multi-channel analyzer
@@ -107,4 +114,5 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre></pre>
-
+  </body>
+</html>
