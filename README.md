@@ -71,6 +71,10 @@
         calibrated spectra</li>
        <li>printraw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print as *.pdf the raw
        spectra data</li>
+      <li>save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save the raw
+       spectra data to a *.csv file</li>
+      <li>load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; load the raw
+       spectra data from a *.csv file</li>
     </ul>
     <p><h5><span style="color: #006600;">SHORTCUTS</span></h5></p>
     <ul>
