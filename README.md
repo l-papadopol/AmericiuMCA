@@ -57,7 +57,7 @@
       increment/decrements.</p>
     <p>Keyboard arrows left and right are used for the same porpoise but with
       ten channel increment/decrements.</p>
-    <p>Main commands:</p>
+    <p><h4><span style="color: #006600;">COMMANDS</span></h4></p>
     <ul>
       <li>start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; starts the acquisition&nbsp;
         but prior it resets/cancels the previously acquired spectra / 556AIM
@@ -72,7 +72,7 @@
        <li>printraw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print as *.pdf the raw
        spectra data</li>
     </ul>
-    <p>Shortcuts:</p>
+    <p><h5><span style="color: #006600;">SHORTCUTS</span></h5></p>
     <ul>
       <li>Ctrl + a&nbsp;&nbsp;&nbsp; set calibration marker A on channel
         selected by main cursor</li>
@@ -87,7 +87,7 @@
       <li>Ctrl + r&nbsp;&nbsp;&nbsp; set right peak skirt point for peak
         selection</li>
     </ul>
-    <p>Linear / Logarithmic pulse count scale:</p>
+    <p><h4><span style="color: #006600;">LIN/LOG SCALE</span></h4></p>
     The main window alias "working window", have as per default linear scale.<br>
     All the operations, calibration, FWHM measure etc... are performed in this window.<br>
     The logarithmic scale is only available after energy calibration on the secondary windows "Calibrated spectra" that is called
@@ -97,6 +97,17 @@
     This is standard linear scale of the plot shown after issuing the command "plot".<br>
     Clicking on the button on the top right you can switch to logarithmic scale.<br>
     <div style="text-align: center;"><img src="avoid_colours_2.png"
+        alt="s" title="a" style="width: 602px; height: 304px;"></div>
+        <br>
+    <p><h4><span style="color: #006600;">ENERGY CALIBRATION</span></h4></p>
+    AmericiuMCA have implemented quadratic fitting energy calibration. To calibrate a spectra you need to clearly recognize three isotope peaks and
+    already know their energy.<br>
+    Use the keyboard arrows or mouse wheel to select first, lowest energy isotope peak tip. Type the energy in keV without pressing "Enter",
+    press Ctrl + a. A purple calibration marker labelled "A" will appear. Continue with the middle energy peak and Ctrl + B then for the highest enery peak and Ctrl + C. <br>
+    Now that you have set the three calibration points, you can show the linearity of your probe plot by typing command "plt".<br>
+    To show energy calibrated spectra issue the command "plot".<br>
+    The shortcut Ctrl + j resets the three calibration points.<br><br>
+    <div style="text-align: center;"><img src="colored.png"
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
     <h4><b><span style="color: #006600;">LICENCE</span><br>
       </b></h4>
