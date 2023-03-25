@@ -16,6 +16,10 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
 import matplotlib.ticker as ticker
 
+import csv
+from tkinter import Tk
+from tkinter.filedialog import *
+from tkinter import messagebox
 # Load EPICS CA Tools
 from epics import caget, caput, cainfo
 from epics import PV
@@ -57,7 +61,75 @@ def get_data():
             spectra_array[n] = max  # Copy samples into spectra array
             n = n + 1
 
+def save_csv_file(array_to_save):
+    # Initialize the file path
+    file_path = ""
+    # Loop until the user clicks the close button or selects a file
+    done = False
+    while not done:
+        # Show file dialog to select file to save
+        root = Tk()
+        root.withdraw()  # Hide the root window
+        file_path = asksaveasfilename(defaultextension=".csv", filetypes=(("CSV files", "*.csv"), ("All files", "*.*")))
+        if file_path:
+            # Reshape the 1D array into a 2D array
+            array_to_save = array_to_save.reshape(-1, 1)
+            # Convert the numpy array to a list of lists
+            array_as_list = array_to_save.tolist()
+            # Save the array as CSV
+            with open(file_path, "w", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerows(array_as_list)
+            done = True
+    return file_path
 
+def load_csv_file():
+    global spectra_array
+    # Initialize the file path
+    file_path = ""
+    # Loop until the user clicks the close button or selects a file
+    done = False
+    while not done:
+        # Show file dialog to select file to load
+        root = Tk()
+        root.withdraw()  # Hide the root window
+        file_path = askopenfilename(filetypes=(("CSV files", "*.csv"), ("All files", "*.*")))
+        if file_path:
+            # Read the CSV file into a list of lists
+            with open(file_path, "r") as f:
+                reader = csv.reader(f)
+                array_as_list = list(reader)
+            # Convert the list of lists to a NumPy array
+            spectra_array = np.array(array_as_list).astype(np.uint32)
+            done = True
+    return file_path       
+
+def print_chart(array_to_print):
+    # Create a matplotlib figure and axis
+    fig, ax = plt.subplots()
+    # Plot the array as a line chart
+    ax.plot(array_to_print)
+    # Set the title and axis labels
+    ax.set_title("RAW Gamma Spectra")
+    ax.set_xlabel("Channel")
+    ax.set_ylabel("Count")
+    # Show the plot
+    plt.show(block=False)
+    # Show a message box asking the user if they want to print the chart
+    root = Tk()
+    root.withdraw()
+    message_box_result = messagebox.askquestion("Print Chart", "Do you want to print this chart?")
+    if message_box_result == "yes":
+        # Show a file dialog to select the printer and print options
+        file_path = asksaveasfilename(defaultextension=".pdf")
+        if file_path:
+            # Save the chart to a PDF file
+            fig.savefig(file_path, bbox_inches="tight")
+            # Print the chart
+            fig.canvas.print_figure(file_path, bbox_inches="tight")
+            # Close the plot
+            plt.close(fig)    
+            
 # Textual keywords handling
 def commands():
     global input_string
@@ -67,13 +139,23 @@ def commands():
     global e_time_old
     global calib_x, calib_y
     global spectra_array
+    global loaded_spectra
 
+    # Save
+    if input_string == "save":
+        input_string = "Saved to: " + save_csv_file(spectra_array)
+    # Load
+    if input_string == "load":
+        input_string = "Loaded: " + load_csv_file()   
+        loaded_spectra = True
+    # Resume        
     if input_string == "resume":
         caput(config.PV_NAMES[m_adc]+"Start", 1)
         input_string = "OK!"
         acq_status = True
         start = timer()
         e_time_old = e_time
+    # Start
     if input_string == "start":
         caput(config.PV_NAMES[m_adc]+"EraseStart", 1)
         input_string = "OK!"
@@ -81,23 +163,29 @@ def commands():
         time.sleep(1)
         start = timer()
         e_time_old = 0
+    # Stop
     if input_string == "stop":
         caput(config.PV_NAMES[m_adc]+"Stop", 1)
         input_string = "OK!"
         acq_status = False
+    # Plt
     if input_string == "plt":
         if calib_x[0] != 0 or calib_x[1] != 0 or calib_x[2] != 0: 
             polyfit(calib_x, calib_y)
             input_string = "OK!"
         else:
             input_string = "Provide three calibration points first!"
+    # Plot
     if input_string == "plot":
         if calib_x[0] != 0 or calib_x[1] != 0 or calib_x[2] != 0: 
             cali_plt(spectra_array, calib_x, calib_y)
             input_string = "OK!"
         else:
             input_string = "Provide three calibration points first!"
-			
+	# Print
+    if input_string == "printraw":
+        print_chart(spectra_array)
+        input_string = "Done!"
 			
 # Polynomial fitting
 def polyfit(calib_x, calib_y):
@@ -199,6 +287,7 @@ def main():
     marker_r = False
     global input_string
     global acq_status
+    global loaded_spectra
     pk_area = 0
     FWHM = 0
     FWHM_percentual = 0
@@ -209,7 +298,8 @@ def main():
     calib_b = 0
     calib_c = 0
     global calib_x, calib_y
-
+    
+    
     pygame.init()
     pygame.display.set_caption("AmericiuMCA")
     pygame_icon = pygame.image.load('multimedia/rsuit.ico')
@@ -217,7 +307,6 @@ def main():
     # Set up the drawing window
     screen = pygame.display.set_mode([1322, 640])
     font = pygame.font.Font('multimedia/Consolas.ttf', 16)
-
     if config.INTERFACE == '556AIM':
         init_ca()
 
@@ -266,6 +355,14 @@ def main():
                         marker_l_value = 0
                         marker_r = False
                         marker_r_value = 0
+                elif event.key == pygame.K_j:
+                    mods = pygame.key.get_mods()
+                    if mods & pygame.KMOD_CTRL:
+                        calib_x = [0, 0, 0]
+                        calib_y = [0, 0, 0]
+                        calib_a = 0
+                        calib_b = 0
+                        calib_c = 0
             elif event.type == QUIT:
                 running = False
             if event.type == pygame.MOUSEWHEEL:
@@ -314,7 +411,7 @@ def main():
         if acq_status == False:
             cursor_y = 520
             ch_cnt_caption = font.render(str(0), True, (255, 0, 0))
-        else:
+        if acq_status == True or loaded_spectra == True:
             cursor_y = 520 - int(spectra_array[cursor]/scale_factor)
             ch_cnt_caption = font.render(
                 str(spectra_array[cursor]), True, (255, 0, 0))
@@ -421,7 +518,7 @@ def main():
             ("Time: " + str(int(e_time)), color_time),
             ("Area: " + str(int(pk_area)) + " cnt", (200, 200, 0)),
             ("Centroid: " + str(centroid) + " ch.", (200, 200, 0)),
-            ("FWHM: " + str(int(FWHM)) + " ch. " + str(round(FWHM_percentual, 2)) + "%", (200, 200, 0))
+            ("FWHM: " + str(int(FWHM)) + " ch. " + str(np.round(FWHM_percentual, 2)) + "%", (200, 200, 0))
         ]
 
         for i, (label, color) in enumerate(labels):
