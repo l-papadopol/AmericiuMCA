@@ -107,7 +107,8 @@
     AmericiuMCA have implemented quadratic fitting energy calibration. To calibrate a spectra you need to clearly recognize three isotope peaks and
     already know their energy.<br>
     Use the keyboard arrows or mouse wheel to select first, lowest energy isotope peak tip. Type the energy in keV without pressing "Enter",
-    press Ctrl + a. A purple calibration marker labelled "A" will appear. Continue with the middle energy peak and Ctrl + B then for the highest enery peak and Ctrl + C. <br>
+    press Ctrl + a.<br>
+    Purple calibration marker labelled "A" will appear. Continue with the middle energy peak and Ctrl + b then for the highest enery peak and Ctrl + c. <br>
     Now that you have set the three calibration points, you can show the linearity of your probe plot by typing command "plt".<br>
     To show energy calibrated spectra issue the command "plot".<br>
     The shortcut Ctrl + j resets the three calibration points.<br><br>
