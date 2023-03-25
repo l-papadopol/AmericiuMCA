@@ -69,19 +69,22 @@
         the linearity chart</li>
       <li>plot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plot the
         calibrated spectra</li>
+       <li>printraw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print as *.pdf the raw
+       spectra data</li>
     </ul>
     <p>Shortcuts:</p>
     <ul>
-      <li>Ctrl + A&nbsp;&nbsp;&nbsp; set calibration marker A on channel
+      <li>Ctrl + a&nbsp;&nbsp;&nbsp; set calibration marker A on channel
         selected by main cursor</li>
-      <li>Ctrl + B&nbsp;&nbsp;&nbsp; set calibration marker B on channel
+      <li>Ctrl + b&nbsp;&nbsp;&nbsp; set calibration marker B on channel
         selected by main cursor</li>
-      <li>Ctrl + C&nbsp;&nbsp;&nbsp; set calibration marker C on channel
+      <li>Ctrl + c&nbsp;&nbsp;&nbsp; set calibration marker C on channel
         selected by main cursor</li>
-      <li>Ctrl + X&nbsp;&nbsp;&nbsp; cancel peak selection markers</li>
-      <li>Ctrl + L&nbsp;&nbsp;&nbsp; set left peak skirt point for peak
+      <li>Ctrl + x&nbsp;&nbsp;&nbsp; cancel peak selection markers</li>
+      <li>Ctrl + j&nbsp;&nbsp;&nbsp; cancel calibration points A, B, C markers</li>
+      <li>Ctrl + l&nbsp;&nbsp;&nbsp; set left peak skirt point for peak
         selection</li>
-      <li>Ctrl + R&nbsp;&nbsp;&nbsp; set right peak skirt point for peak
+      <li>Ctrl + r&nbsp;&nbsp;&nbsp; set right peak skirt point for peak
         selection</li>
     </ul>
     <h4><b><span style="color: #006600;">LICENCE</span><br>
