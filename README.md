@@ -112,7 +112,7 @@
     <h4><b><span style="color: #006600;">LICENCE</span><br>
       </b></h4>
     <pre><meta http-equiv="content-type" content="text/html; charset=utf-8"><pre>Copyright (c) 2023, Papadopol Lucian Ioan
-All rights reserved.
+All rights reserved. Contact: l.i.papadopol "@" gmail.com
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -124,14 +124,14 @@ modification, are permitted provided that the following conditions are met:
 3. All advertising materials mentioning features or use of this software
    must display the following acknowledgement:
    This product includes software developed by the &lt;organization&gt;.
-4. Neither the name of the &lt;AmericiuMCA / Papadopol Lucian Ioan / Madexp&gt; nor the
+4. Neither the name AmericiuMCA / Papadopol Lucian Ioan / Madexp nor the
    names of its contributors may be used to endorse or promote products
    derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY PAPADOPOL LUCIAN IOAN ''AS IS'' AND ANY
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY
+DISCLAIMED. IN NO EVENT SHALL PAPADOPOL LUCIAN IOAN BE LIABLE FOR ANY
 DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
