@@ -57,7 +57,7 @@
       increment/decrements.</p>
     <p>Keyboard arrows left and right are used for the same porpoise but with
       ten channel increment/decrements.</p>
-    <p><h4><span style="color: #006600;">COMMANDS</span></h4></p>
+    <p><h5><span style="color: #006600;">COMMANDS</span></h5></p>
     <ul>
       <li>start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; starts the acquisition&nbsp;
         but prior it resets/cancels the previously acquired spectra / 556AIM
@@ -87,7 +87,7 @@
       <li>Ctrl + r&nbsp;&nbsp;&nbsp; set right peak skirt point for peak
         selection</li>
     </ul>
-    <p><h4><span style="color: #006600;">LIN/LOG SCALE</span></h4></p>
+    <p><h5><span style="color: #006600;">LIN/LOG SCALE</span></h5></p>
     The main window alias "working window", have as per default linear scale.<br>
     All the operations, calibration, FWHM measure etc... are performed in this window.<br>
     The logarithmic scale is only available after energy calibration on the secondary windows "Calibrated spectra" that is called
@@ -99,7 +99,7 @@
     <div style="text-align: center;"><img src="avoid_colours_2.png"
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
         <br>
-    <p><h4><span style="color: #006600;">ENERGY CALIBRATION</span></h4></p>
+    <p><h5><span style="color: #006600;">ENERGY CALIBRATION</span></h5></p>
     AmericiuMCA have implemented quadratic fitting energy calibration. To calibrate a spectra you need to clearly recognize three isotope peaks and
     already know their energy.<br>
     Use the keyboard arrows or mouse wheel to select first, lowest energy isotope peak tip. Type the energy in keV without pressing "Enter",
