@@ -96,7 +96,7 @@
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
     This is standard linear scale of the plot shown after issuing the command "plot".<br>
     Clicking on the button on the top right you can switch to logarithmic scale.<br>
-    <div style="text-align: center;"><img src="avoid_colours2.png"
+    <div style="text-align: center;"><img src="avoid_colours_2.png"
         alt="s" title="a" style="width: 602px; height: 304px;"></div>
     <h4><b><span style="color: #006600;">LICENCE</span><br>
       </b></h4>
