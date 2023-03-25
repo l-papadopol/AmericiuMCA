@@ -124,7 +124,7 @@ modification, are permitted provided that the following conditions are met:
 3. All advertising materials mentioning features or use of this software
    must display the following acknowledgement:
    This product includes software developed by the &lt;organization&gt;.
-4. Neither the name of the &lt;organization&gt; nor the
+4. Neither the name of the &lt;AmericiuMCA / Papadopol Lucian Ioan / Madexp&gt; nor the
    names of its contributors may be used to endorse or promote products
    derived from this software without specific prior written permission.
 
