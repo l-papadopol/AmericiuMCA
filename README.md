@@ -87,6 +87,17 @@
       <li>Ctrl + r&nbsp;&nbsp;&nbsp; set right peak skirt point for peak
         selection</li>
     </ul>
+    <p>Linear / Logarithmic pulse count scale:</p>
+    The main window alias "working window", have as per default linear scale.<br>
+    All the operations, calibration, FWHM measure etc... are performed in this window.<br>
+    The logarithmic scale is only available after energy calibration on the secondary windows "Calibrated spectra" that is called
+    with the command "plot"<br>
+    <div style="text-align: center;"><img src="avoid_colours.png"
+        alt="s" title="a" style="width: 602px; height: 304px;"></div>
+    This is standard linear scale of the plot shown after issuing the command "plot".<br>
+    Clicking on the button on the top right you can switch to logarithmic scale.<br>
+    <div style="text-align: center;"><img src="avoid_colours2.png"
+        alt="s" title="a" style="width: 602px; height: 304px;"></div>
     <h4><b><span style="color: #006600;">LICENCE</span><br>
       </b></h4>
     <pre><meta http-equiv="content-type" content="text/html; charset=utf-8"><pre>Copyright (c) 2023, Papadopol Lucian Ioan
