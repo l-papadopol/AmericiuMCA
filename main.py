@@ -40,7 +40,7 @@ def init_ca():
     # Create the Process Variable Object
     m_process_var = PV(config.PV_NAMES[m_adc])
     # Printout the information about the Process Variable
-    cainfo(config.PV_NAMES[m_adc])
+    #cainfo(config.PV_NAMES[m_adc])
     time.sleep(2)
 
 

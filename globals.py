@@ -10,3 +10,4 @@ e_time = 0
 e_time_old = 0
 calib_x = [0, 0, 0]
 calib_y = [0, 0, 0]
+loaded_spectra = False

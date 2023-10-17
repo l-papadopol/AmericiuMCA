@@ -6,7 +6,7 @@
 # Function: Configuration for the EPICS based MAC Application protocol converter
 #####################################################################
 INTERFACE = '556AIM'
-PV_NAMES = ['mcaTest:aim_adc1', 'mcaTest:aim_adc2']
+PV_NAMES = ['mcaTest:AIM_adc1', 'mcaTest:AIM_adc2']
 PV_LENGTH = [1024, 1024] 
 SPECTRA_SIZE = 1024  # Maximum spectra size
 NUM_OF_CHANNELS = 1024
